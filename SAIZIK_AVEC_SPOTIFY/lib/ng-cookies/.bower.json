@@ -1,0 +1,28 @@
+{
+  "name": "ng-cookies",
+  "version": "1.1.1",
+  "description": "Simple cookie service for AngularJS",
+  "authors": [
+    "FanDuel Inc.",
+    "Rory Fitzpatrick"
+  ],
+  "main": "dist/ng-cookies.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test*",
+    "bin",
+    "karma*"
+  ],
+  "homepage": "https://github.com/roryf/ng-cookies",
+  "_release": "1.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.1",
+    "commit": "716cc424a902e26a0520cd5abf1fe4b71c85cc4f"
+  },
+  "_source": "https://github.com/roryf/ng-cookies.git",
+  "_target": "^1.1.1",
+  "_originalSource": "ng-cookies",
+  "_direct": true
+}
