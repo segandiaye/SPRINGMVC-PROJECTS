@@ -1,0 +1,80 @@
+<html>
+  <head>
+      <title>TP1 PLS</title>
+      <link rel="stylesheet" type="text/css" href='<%= style.style %>'>
+      <link rel="icon" type="image/x-icon" href="https://galilee.univ-paris13.fr/wp-content/uploads/favicon.jpg">
+  </head>
+</html>
+	<body>
+		<script>
+			function resetValue() {
+        alert(Reset);
+				document.getElementById("id_name").value="";
+			}
+		</script>
+    <img width="100" alt="Paris 13 Logo" src='<%= style.img %>'>
+		<div class="top" style='text-align:center;color:black solid 10px;font-size:25px'><p>Notre premier TP de JS avancée</p></div>
+		<div style='text-align:center;'><p>Matières PLS</p></div>
+		<div style='text-align:center'>
+      <% if(!edit) {%>
+  			<form action='/add' id="form" method='post' name='form1'>
+  				Matière : <input type= 'text' id="id_name" onfocus="this.value=''" name='name' value='<%= user.name %>'>&nbsp;&nbsp;
+  				<span style='<%= color %>'><%= smsModif %></span>
+  				<br/>
+  				<br/>
+  				<button type='reset' onclick="resetValue()">réinitialiser</button>
+  				<br/>
+  				<br/>
+  				<button type='submit'>Ajouter une matière</button>
+  			</form>
+      <% } %>
+      <%  if(edit) {%>
+        <div style='text-align:center'>
+            <form method="POST" action='/update/<%= user.id %>?_method=PUT'>
+              Matière : <input type= 'text' id="id_name" onfocus="this.value=''" name='name' value='<%= user.name %>'>&nbsp;&nbsp;
+              <span style='<%= color %>'><%= smsModif %></span>
+              <br/>
+              <br/>
+              <button type='reset' onclick="resetValue()">réinitialiser</button>
+              <br/>
+              <br/>
+              <button type="submit">Enrégistrer les modifications</button>
+            </form>
+        </div>
+      <% } %>
+      <br/>
+      <br/>
+      <div style='text-align:center'>
+        <table>
+          <thead>
+            <thead>
+              <tr>
+                <th>MATIERES</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+          <tbody>
+            <% for(var i=0; i<users.length; i++) {%>
+              <tr>
+                <td>
+                  <span style="color:blue"><%= users[i].name %></span>
+                </td>
+                <td>
+                  <form method="GET" action='/detail/<%= users[i].id %>'>
+                    <button type="submit">éditer</button>
+                  </form>
+                </td>
+                <td>
+                  <form method="POST" action='/delete/<%= users[i].id %>?_method=DELETE'>
+                    <button type="submit">supprimer</button>
+                  </form>
+                </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+		</div>
+	</body>
+</html>

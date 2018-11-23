@@ -1,0 +1,28 @@
+body {
+    background-color: lightblue;
+}
+
+p {
+    color: navy;
+    margin-left: 20px;
+}
+
+.top {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.premier{
+    text-align: center;
+    animation: blinker 1s linear infinite;
+    background-color: lightgrey;
+    width: 600px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
