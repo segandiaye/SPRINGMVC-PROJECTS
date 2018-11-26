@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/accueilid"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical">
+
+    <TextView
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="Nombre 1 : "
+	android:textStyle="bold"
+	android:textColor="#FF0000"
+	/>
+	<EditText
+	android:id="@+id/login"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:inputType="numberDecimal"
+	/>
+	<TextView
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:text="Nombre 2 : "
+	android:textStyle="bold"
+	android:textColor="#FF0000"
+	/>
+	<EditText
+	android:id="@+id/mdp"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:inputType="numberDecimal"
+	/>
+    <Button
+	android:id="@+id/button1"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Calculer"
+	android:layout_gravity="center"
+	/>
+</LinearLayout>

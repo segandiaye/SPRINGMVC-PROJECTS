@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical">
+	
+    <Button
+	android:id="@+id/user_reg"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="Login"/>
+    
+    <Button
+	android:id="@+id/user_reg1"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="Register"/>
+    
+    <Button
+	android:id="@+id/user_reg2"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="Update Info"/>
+    
+    <Button
+	android:id="@+id/user_reg3"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:hint="Delete User"/>
+</LinearLayout>

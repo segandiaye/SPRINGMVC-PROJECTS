@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="layout1" template="/WEB-INF/templates/layout1.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/templates/layout1/header.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/templates/layout1/menu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB INF/templates/layout1/footer.jsp"></put-attribute> 
+	</definition>
+	<definition name="layout2" template="/WEB-INF/templates/layout2.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/templates/layout2/header.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/templates/layout2/menu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/templates/layout2/footer.jsp"></put-attribute>
+	</definition>
+	<definition name="ProduitsView" extends="layout1">
+		<put-attribute name="title" value="Produits" />
+		<put-attribute name="body" value="/WEB-INF/views/ProduitsView.jsp" />
+		</definition>
+		<definition name="CategoriesView" extends="layout1">
+		<put-attribute name="title" value="Catégories" />
+		<put-attribute name="body" value="/WEB-INF/views/CategoriesView.jsp" />
+	</definition>
+	<definition name="login" extends="layout1">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	<definition name="index" extends="layout2">
+		<put-attribute name="title" value="EBoutique" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+</tiles-definitions>
