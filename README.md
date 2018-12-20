@@ -1,2 +1,2 @@
-# Je suis développeur junior qui cherche à m'améliorer.
+# « Je suis un développeur junior qui cherche à s'améliorer ».
 #
