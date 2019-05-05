@@ -112,7 +112,7 @@ public class FenetrePrincipale extends JFrame
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		btnNewButton = new JButton("ScolaritÈ");
+		btnNewButton = new JButton("Scolarit√©");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try
@@ -129,7 +129,7 @@ public class FenetrePrincipale extends JFrame
 		btnNewButton.setBounds(62, 202, 173, 65);
 		contentPane.add(btnNewButton);
 		
-		btnBibliothque = new JButton("BibliothÈque");
+		btnBibliothque = new JButton("Biblioth√©que");
 		btnBibliothque.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try
@@ -146,7 +146,7 @@ public class FenetrePrincipale extends JFrame
 		btnBibliothque.setBounds(354, 202, 164, 65);
 		contentPane.add(btnBibliothque);
 		
-		lblProjetImportationDes = new JLabel("Projet: Importation des donnÈes d'une base vers autre");
+		lblProjetImportationDes = new JLabel("Projet: Importation des donn√©es d'une base vers autre");
 		lblProjetImportationDes.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblProjetImportationDes.setBackground(Color.BLUE);
 		lblProjetImportationDes.setForeground(Color.BLUE);
@@ -181,7 +181,7 @@ public class FenetrePrincipale extends JFrame
 	
 	  public static void main(String[] args) 
 	    {
-	        new FenetrePrincipale(" SÈga NDIAYE ").setVisible(true);
+	        new FenetrePrincipale(" S√©ga NDIAYE ").setVisible(true);
 	    }
 
 	  
@@ -190,13 +190,13 @@ public class FenetrePrincipale extends JFrame
 	 public void lanceDialogSCO( )
 	   	 { 
 		 
-		 dialog = new JDialog( this," ScolaritÈ ",true);
+		 dialog = new JDialog( this," Scolarit√© ",true);
 	   	 
 		    dialog.setBackground(Color.LIGHT_GRAY);
 		    dialog.setBounds(100, 100, 450, 500);
 			dialog .setLayout(null);
 			
-			JLabel lblEntrezUnNumero = new JLabel("NumÈro de Carte");
+			JLabel lblEntrezUnNumero = new JLabel("Num√©ro de Carte");
 			lblEntrezUnNumero.setFont(new Font("Traditional Arabic", Font.PLAIN, 14));
 			lblEntrezUnNumero.setBounds(0, 7, 171, 35);
 			dialog .add(lblEntrezUnNumero);
@@ -243,7 +243,7 @@ public class FenetrePrincipale extends JFrame
 			lblNom.setBounds(0, 84, 66, 26);
 			dialog.add(lblNom);
 			
-			JLabel lblPrnom = new JLabel("PrÈnom");
+			JLabel lblPrnom = new JLabel("Pr√©nom");
 			lblPrnom.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			lblPrnom.setBounds(0, 124, 66, 20);
 			dialog.add(lblPrnom);
@@ -253,7 +253,7 @@ public class FenetrePrincipale extends JFrame
 			lblLieuDeNaissance.setBounds(0, 161, 139, 20);
 			dialog.add(lblLieuDeNaissance);
 			
-			JLabel lblFacult = new JLabel("FacultÈ");
+			JLabel lblFacult = new JLabel("Facult√©");
 			lblFacult.setFont(new Font("Tahoma", Font.PLAIN, 14));
 			lblFacult.setBounds(0, 197, 66, 20);
 			dialog.add(lblFacult);
@@ -272,7 +272,7 @@ public class FenetrePrincipale extends JFrame
 			btnVoirLaListe.setBounds(208, 399, 139, 23);
 			dialog .add(btnVoirLaListe);
 			
-			JButton btnEnregistrerLaBase = new JButton("Ajoutez et EnrÈgistrer dans le fichier XML");
+			JButton btnEnregistrerLaBase = new JButton("Ajoutez et Enr√©gistrer dans le fichier XML");
 			btnEnregistrerLaBase.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
@@ -282,7 +282,8 @@ public class FenetrePrincipale extends JFrame
 						catch (Exception er){System.out .println("Erreur driver:  "+er.getMessage ( ) ) ;}
 						
 							
-							try {con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "root","s890206") ;
+							try {con = (Connection) DriverManager.getConnection ("jdbc:mysql://
+							/Scolarite", "user","") ;
 							}
 							catch (Exception ez ){System.out.println("Erreur de connexion "+ ez.getMessage ( ));}
 						
@@ -299,7 +300,7 @@ public class FenetrePrincipale extends JFrame
 									while(rs.next())
 									{
 										if((textField).equals(rs.getString(1)))
-										{lblNumroExisteDj.setText("NumÈro dÈj‡ attribuÈ");}
+										{lblNumroExisteDj.setText("Num√©ro d√©j√† attribu√©");}
 										else{lanceDialogEnXML();}
 										
 									}
@@ -323,7 +324,7 @@ public class FenetrePrincipale extends JFrame
 			btnEnregistrerLaBase.setBounds(146, 250, 244, 35);
 			dialog .add(btnEnregistrerLaBase);
 			
-			JLabel lblVoirLaListe = new JLabel("Voir la liste BD ScolaritÈ clic ici");
+			JLabel lblVoirLaListe = new JLabel("Voir la liste BD Scolarit√© clic ici");
 			lblVoirLaListe.setBounds(40, 403, 154, 14);
 			dialog .add(lblVoirLaListe);
 			
@@ -362,7 +363,7 @@ public class FenetrePrincipale extends JFrame
 			dialog2.add(panel);
 			panel.setLayout(null);
 			
-			JLabel lblVrification = new JLabel("VÈrifier ou Importer tout");
+			JLabel lblVrification = new JLabel("V√©rifier ou Importer tout");
 			lblVrification.setBackground(Color.BLUE);
 			lblVrification.setBounds(153, 10, 183, 20);
 			lblVrification.setForeground(Color.BLUE);
@@ -381,7 +382,7 @@ public class FenetrePrincipale extends JFrame
 			dialog2.add(textFieldB);
 			textFieldB.setColumns(10);
 			
-			JButton btnVrifier = new JButton("Choisir qui importÈ");
+			JButton btnVrifier = new JButton("Choisir qui import√©");
 			btnVrifier.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					 try{
@@ -395,7 +396,7 @@ public class FenetrePrincipale extends JFrame
 	         					
 	         					try
 	         					{
-	         						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "root","s890206") ;
+	         						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "user","cccccc") ;
 	         					}
 	         					catch (Exception ez ){System.out.println("Erreur de connexion "+ ez.getMessage ( ));}
 	         				
@@ -419,10 +420,10 @@ public class FenetrePrincipale extends JFrame
 	         									lanceDialogVerifier();
 	         									dialog5.dispose();
 	         								}
-	         								else if(numC.equals("")){lblEntrerUnNumro.setText("Vous n'avez pas saisi de NumÈro de carte"); }
+	         								else if(numC.equals("")){lblEntrerUnNumro.setText("Vous n'avez pas saisi de Num√©ro de carte"); }
 		         								else
 		         								{
-		         									lblEntrerUnNumro.setText("DÈsoler impossible d'importer car l'Ètudiant nexiste pas dans ScolaritÈ");
+		         									lblEntrerUnNumro.setText("D√©soler impossible d'importer car l'√©tudiant nexiste pas dans Scolarit√©");
 		         								}
 	         							}      							
 	         				}
@@ -461,7 +462,7 @@ public class FenetrePrincipale extends JFrame
 					}
 					try 
 					{
-						con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque","root","s890206") ;
+						con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque","user","cccccc") ;
 					}
 					catch (Exception ez )
 					{
@@ -482,7 +483,7 @@ public class FenetrePrincipale extends JFrame
 						SAXBuilder builder = new SAXBuilder(); 
 						builder.setIgnoringElementContentWhitespace(true); 
 						Document document = builder.build(new File("C:/workspace/ProjetScoBu/Scolarite.xml")); 
-						Element Racine = document.getRootElement(); 	
+						Element Racine = document.getuserElement(); 	
 						Element etudiants=Racine.getChild("etudiants");
 						
 						List<?> etudiant = etudiants.getChildren();
@@ -571,7 +572,7 @@ public class FenetrePrincipale extends JFrame
 	  public void lanceDialogVoirList()
 	   	 { 
 		  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		  dialog3 = new JDialog( this," Liste des Ètudiants dans la base ScolaritÈ ",true);
+		  dialog3 = new JDialog( this," Liste des √©tudiants dans la base Scolarit√© ",true);
 		  dialog3.setSize(600,900);
 		  
 			try {  
@@ -582,7 +583,7 @@ public class FenetrePrincipale extends JFrame
 					
 					try
 					{
-						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "root","s890206") ;
+						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "user","cccccc") ;
 					}
 					catch (Exception ez ){System.out.println("Erreur de connexion "+ ez.getMessage ( ));}
 				
@@ -653,7 +654,7 @@ public class FenetrePrincipale extends JFrame
 			{	System.out .println("Erreur driver:  "+e.getMessage ( ) ) ;	}
 			try 
 			{
-				con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite","root","s890206") ;
+				con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite","user","cccccc") ;
 			}
 			catch (Exception ez )
 			{	System.out.println("Erreur de connexion "+ ez.getMessage ( ));	}
@@ -752,7 +753,7 @@ public class FenetrePrincipale extends JFrame
 	  public void lanceDialogVoirListBU()
 	   	 { 
 		  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		  dialog4 = new JDialog( this," Liste des Ètudiants dans la base ScolaritÈ ",true);
+		  dialog4 = new JDialog( this," Liste des √©tudiants dans la base Scolarit√© ",true);
 		  dialog4.setSize(600,900);
 		  
 			try {  
@@ -763,7 +764,7 @@ public class FenetrePrincipale extends JFrame
 					
 					try
 					{
-						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque", "root","s890206") ;
+						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque", "user","cccccc") ;
 					}
 					catch (Exception ez ){System.out.println("Erreur de connexion "+ ez.getMessage ( ));}
 				
@@ -841,7 +842,7 @@ public class FenetrePrincipale extends JFrame
 				lblLtudiantExisteIl.setBounds(153, 24, 144, 21);
 				dialog5.add(lblLtudiantExisteIl);
 				
-				JLabel lblIlAPourTel = new JLabel("pour TÈlÈphone");
+				JLabel lblIlAPourTel = new JLabel("pour T√©l√©phone");
 				lblIlAPourTel.setFont(new Font("Tahoma", Font.PLAIN, 13));
 				lblIlAPourTel.setBounds(10, 56, 91, 14);
 				dialog5.add(lblIlAPourTel);
@@ -870,7 +871,7 @@ public class FenetrePrincipale extends JFrame
 						}
 						try 
 						{
-							con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque","root","s890206") ;
+							con =(Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Bibliotheque","user","cccccc") ;
 						}
 						catch (Exception ez )
 						{
@@ -941,10 +942,10 @@ public class FenetrePrincipale extends JFrame
 				dialog5.add(textFieldve_2);
 				textFieldve_2.setColumns(10);
 				
-				JLabel lblPourFacultÈ = new JLabel("Pour FacultÈ");
-				lblPourFacultÈ.setFont(new Font("Tahoma", Font.PLAIN, 12));
-				lblPourFacultÈ.setBounds(10, 147, 99, 14);
-				dialog5.add(lblPourFacultÈ);
+				JLabel lblPourFacult√© = new JLabel("Pour Facult√©");
+				lblPourFacult√©.setFont(new Font("Tahoma", Font.PLAIN, 12));
+				lblPourFacult√©.setBounds(10, 147, 99, 14);
+				dialog5.add(lblPourFacult√©);
 				
 				textFieldve_3 = new JTextField();
 				textFieldve_3.setBounds(130, 145, 167, 20);
@@ -964,7 +965,7 @@ public class FenetrePrincipale extends JFrame
 	        					
 	        					try
 	        					{
-	        						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "root","s890206") ;
+	        						con = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/Scolarite", "user","cccccc") ;
 	        					}
 	        					catch (Exception ez ){System.out.println("Erreur de connexion "+ ez.getMessage ( ));}
 	        				
