@@ -1,2 +1,1 @@
-# « All I know is that I know nothing (Socrates), always in search of knowledge. ».
-#
+# Everything you need to know about JEE with Spring MVC.
